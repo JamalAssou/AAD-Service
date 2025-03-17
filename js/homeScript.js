@@ -1,3 +1,7 @@
+function goToAboutSection(){
+    document.getElementById("contact").scrollIntoView({behavior: "smooth"});
+}
+
 // Gestion du scroll pour le header
 document.addEventListener('DOMContentLoaded', () => {
     const header = document.querySelector('.header');
@@ -64,5 +68,57 @@ document.addEventListener('DOMContentLoaded', () => {
         card.style.transform = 'translateY(20px)';
         card.style.transition = 'all 0.6s ease-out';
         observer.observe(card);
+    });
+});
+
+//Affichage de la fenetre modal
+document.addEventListener("DOMContentLoaded", function () {
+    const services = [
+        {
+            title: "Développement Web",
+            description: "Nous concevons des sites web performants, modernes et optimisés pour le référencement SEO.",
+            features: [
+                "Sites vitrines",
+                "Sites de réservation",
+                "Sites e-commerce",
+                "Optimisation SEO et responsive",
+                "Développement sur mesure"
+            ]
+        },
+        {
+            title: "Application Mobile",
+            description: "Création d’applications mobiles intuitives et réactives pour iOS et Android.",
+            features: [
+                "Applications de gestion",
+                "Applications de réservation",
+                "Applications e-commerce",
+                "Expérience utilisateur optimisée"
+            ]
+        }
+    ];
+
+    const modal = document.getElementById("service-modal");
+    const modalTitle = document.getElementById("modal-title");
+    const modalDescription = document.getElementById("modal-description");
+    const modalFeatures = document.getElementById("modal-features");
+    const closeModal = document.querySelector(".close");
+
+    document.querySelectorAll(".service-card").forEach((card, index) => {
+        card.addEventListener("click", function () {
+            modalTitle.textContent = services[index].title;
+            modalDescription.textContent = services[index].description;
+            modalFeatures.innerHTML = services[index].features.map(f => `<li>✔️ ${f}</li>`).join("");
+            modal.style.display = "flex";
+        });
+    });
+
+    closeModal.addEventListener("click", function () {
+        modal.style.display = "none";
+    });
+
+    window.addEventListener("click", function (event) {
+        if (event.target === modal) {
+            modal.style.display = "none";
+        }
     });
 });

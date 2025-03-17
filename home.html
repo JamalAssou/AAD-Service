@@ -16,16 +16,17 @@
 
         <div class="nav-links">
             <a href="#services">Nos services</a>
+            <a href="#tarifs">Nos Tarifs</a>
             <a href="#about">À propos</a>
             <a href="#contact">Contact</a>
         </div>
 
         <div class="nav-right">
-            <button class="cta-button">Débuter mon projet</button>
+            <button onclick="goToAboutSection()" class="cta-button">Discutons de votre projet</button>
             <div class="lang-selector">
-                <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-xtviJ8QPrfXcEc7s4SfFnA5hIS5cKF.png" alt="FR" class="flag active">
-                <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-xtviJ8QPrfXcEc7s4SfFnA5hIS5cKF.png" alt="EN" class="flag">
-                <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-xtviJ8QPrfXcEc7s4SfFnA5hIS5cKF.png" alt="ES" class="flag">
+                <img src="https://th.bing.com/th/id/OIP.ikT7CNEXUtGHy_1MsOHY9QAAAA?rs=1&pid=ImgDetMain" alt="FR" class="flag active">
+                <img src="https://images7.alphacoders.com/530/thumb-1920-530104.jpg" alt="EN" class="flag">
+                <img src="https://wallpaperaccess.com/full/1411226.jpg" alt="NL" class="flag">
             </div>
         </div>
 
@@ -72,12 +73,53 @@
         </p>
         <div class="services-grid">
             <div class="service-card">
-                <h2>Développement Web</h2>
+                <h2>Site Web</h2>
                 <p>Conception et développement de sites web sur mesure, optimisés pour la performance et l'expérience utilisateur.</p>
             </div>
             <div class="service-card">
                 <h2>Application Mobile</h2>
                 <p>Création d'applications mobiles ergonomiques et réactives pour iOS et Android, adaptées à vos besoins.</p>
+            </div>
+        </div>
+        <!-- Modal pour afficher plus d'informations sur un service -->
+        <div id="service-modal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2 id="modal-title"></h2>
+                <p id="modal-description"></p>
+                <ul id="modal-features"></ul>
+            </div>
+        </div>
+    </section>
+    <section id="tarifs" class="section">
+        <h2 class="section-title">Nos Tarifs</h2>
+        <div class="pricing-container">
+            <div class="pricing-card">
+                <h3>Site Vitrine</h3>
+                <p>À partir de <strong>300€</strong></p>
+                <ul>
+                    <li><strong>✅ Design personnalisé</strong></li>
+                    <li><strong>✅ Site responsive</strong></li>
+                    <li><strong>✅ Optimisation SEO basique</strong></li>
+                </ul>
+            </div>
+            <div class="pricing-card">
+                <h3>Site E-commerce</h3>
+                <p>À partir de <strong>600€</strong></p>
+                <ul>
+                    <li><strong>✅ Gestion des produits et commandes</strong></li>
+                    <li><strong>✅ Intégration de paiement en ligne</strong></li>
+                    <li><strong>✅ Optimisation SEO</strong></li>
+                </ul>
+            </div>
+            <div class="pricing-card">
+                <h3>Application Mobile</h3>
+                <p>À partir de <strong>800€</strong></p>
+                <ul>
+                    <li><strong>✅ Application Android et iOS</strong></li>
+                    <li><strong>✅ Design et expérience utilisateur optimisés</strong></li>
+                    <li><strong>✅ Maintenance et mises à jour</strong></li>
+                </ul>
             </div>
         </div>
     </section>
@@ -87,7 +129,7 @@
             <h2 class="section-title">À Propos</h2>
             <div class="about-grid">
                 <div class="about-image">
-                    <img src="img/AAD_Logo.png" alt="L'équipe AAD Service">
+                    <img src="#" alt="L'équipe AAD Service">
                 </div>
                 <div class="about-content">
                     <h3>Notre Histoire</h3>
