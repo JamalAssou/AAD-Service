@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="AAD Service - Solutions digitales sur mesure pour votre entreprise. Développement web, applications mobiles et stratégie digitale.">
+    <meta name="description"
+          content="AAD Service - Solutions digitales sur mesure pour votre entreprise. Développement web, applications mobiles et stratégie digitale.">
     <title>AAD Service - Solutions Digitales Innovantes</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="icon" href="img/favicon.ico" type="image/x-icon">
@@ -13,21 +14,24 @@
     <nav class="navbar">
         <div class="logo">
             <img src="img/AAD_Logo.png" alt="AAD Service Logo" class="navbar-logo"/>
-            <a href="#hero">AAD Service</a>
+            <a href="#hero" class="text-gradient">AAD Service</a>
         </div>
 
         <div class="nav-links">
-            <a href="#services" class="nav-link" data-lang-key="nav_services">Services</a>
-            <a href="#process" class="nav-link" data-lang-key="nav_process">Notre Processus</a>
-            <a href="#portfolio" class="nav-link" data-lang-key="nav_portfolio">Portfolio</a>
-            <a href="#testimonials" class="nav-link" data-lang-key="nav_testimonials">Témoignages</a>
-            <a href="#tarifs" class="nav-link" data-lang-key="nav_pricing">Tarifs</a>
-            <a href="#about" class="nav-link" data-lang-key="nav_about">À propos</a>
-            <a href="#contact" class="nav-link" data-lang-key="nav_contact">Contact</a>
+            <a href="#services" class="nav-link highlight-animation" data-lang-key="nav_services">Services</a>
+            <a href="#process" class="nav-link highlight-animation" data-lang-key="nav_process">Notre Processus</a>
+            <a href="#portfolio" class="nav-link highlight-animation" data-lang-key="nav_portfolio">Portfolio</a>
+            <a href="#testimonials" class="nav-link highlight-animation"
+               data-lang-key="nav_testimonials">Témoignages</a>
+            <a href="#tarifs" class="nav-link highlight-animation" data-lang-key="nav_pricing">Tarifs</a>
+            <a href="#about" class="nav-link highlight-animation" data-lang-key="nav_about">À propos</a>
+            <a href="#contact" class="nav-link highlight-animation" data-lang-key="nav_contact">Contact</a>
         </div>
 
         <div class="nav-right">
-            <button class="cta-button primary-cta" onclick="goToContactSection()" data-lang-key="discuss_project">Discutons de votre projet</button>
+            <button class="cta-button primary-cta pulse" onclick="goToContactSection()" data-lang-key="discuss_project">
+                Discutons de votre projet
+            </button>
             <div class="lang-selector">
                 <button class="lang-btn active" data-lang="fr">FR</button>
                 <button class="lang-btn" data-lang="en">EN</button>
@@ -44,22 +48,32 @@
 </header>
 
 <main>
-    <section id="hero" class="hero">
+    <section id="hero" class="hero bg-shift">
         <div class="container">
             <div class="hero-content">
-                <h1 class="hero-title" data-lang-key="hero_title">Solutions digitales sur-mesure pour propulser votre entreprise</h1>
-                <p class="hero-text" data-lang-key="hero_text">Transformez votre vision en réalité avec des sites web et applications mobiles performants, adaptés à vos besoins spécifiques.</p>
-                <div class="hero-cta">
-                    <button class="cta-button primary-cta" onclick="scrollToSection('services')" data-lang-key="discover_services">Découvrir nos services</button>
-                    <button class="cta-button secondary-cta" onclick="scrollToSection('portfolio')" data-lang-key="view_portfolio">Voir nos réalisations</button>
+                <h1 class="hero-title text-wave" data-lang-key="hero_title">
+                    <span>S</span><span>o</span><span>l</span><span>u</span><span>t</span><span>i</span><span>o</span><span>n</span><span>s</span>
+                    <span>d</span><span>i</span><span>g</span><span>i</span><span>t</span><span>a</span><span>l</span><span>e</span><span>s</span>
+                    <span>s</span><span>u</span><span>r</span><span>-</span><span>m</span><span>e</span><span>s</span><span>u</span><span>r</span><span>e</span>
+                </h1>
+                <p class="hero-text fade-in-up delay-200" data-lang-key="hero_text">Transformez votre vision en réalité
+                    avec des sites web et applications mobiles performants, adaptés à vos besoins spécifiques.</p>
+                <div class="hero-cta fade-in-up delay-300">
+                    <button class="cta-button primary-cta shadow-move" onclick="scrollToSection('services')"
+                            data-lang-key="discover_services">Découvrir nos services
+                    </button>
+                    <button class="cta-button secondary-cta" onclick="scrollToSection('portfolio')"
+                            data-lang-key="view_portfolio">Voir nos réalisations
+                    </button>
                 </div>
             </div>
-            <div class="hero-image">
-                <div class="hero-shape"></div>
-                <img src="img/test.png?height=500&width=600" alt="Solutions digitales illustration" class="main-image">
+            <div class="hero-image parallax" data-depth="0.2">
+                <div class="hero-shape morph"></div>
+                <img src="img/test.png?height=500&width=600" alt="Solutions digitales illustration"
+                     class="main-image float">
             </div>
         </div>
-        <div class="scroll-indicator">
+        <div class="scroll-indicator bounce">
             <div class="mouse">
                 <div class="wheel"></div>
             </div>
@@ -68,12 +82,13 @@
                 <span></span>
             </div>
         </div>
+        <div class="wave"></div>
     </section>
 
     <section id="services" class="section services-section">
         <div class="container">
             <div class="section-header">
-                <span class="section-tag" data-lang-key="our_expertise">Nos expertises</span>
+                <span class="section-tag gradient-animation" data-lang-key="our_expertise">Nos expertises</span>
                 <h2 class="section-title" data-lang-key="custom_services">Services sur mesure</h2>
                 <p class="section-description" data-lang-key="services_description">
                     Nous concevons des solutions digitales adaptées à vos besoins spécifiques,
@@ -82,8 +97,8 @@
             </div>
 
             <div class="services-grid">
-                <div class="service-card" data-service="web">
-                    <div class="service-icon">
+                <div class="service-card card-3d" data-service="web">
+                    <div class="service-icon pulse">
                         <svg class="icon" viewBox="0 0 24 24" width="48" height="48">
                             <path d="M4 4h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z"></path>
                             <path d="M8 2v4"></path>
@@ -91,8 +106,9 @@
                             <path d="M2 10h20"></path>
                         </svg>
                     </div>
-                    <h3 data-lang-key="websites">Sites Web</h3>
-                    <p data-lang-key="websites_desc">Conception et développement de sites web sur mesure, optimisés pour la performance et l'expérience utilisateur.</p>
+                    <h3 class="color-shift" data-lang-key="websites">Sites Web</h3>
+                    <p data-lang-key="websites_desc">Conception et développement de sites web sur mesure, optimisés pour
+                        la performance et l'expérience utilisateur.</p>
                     <ul class="service-features">
                         <li data-lang-key="websites_feature1">Sites vitrines professionnels</li>
                         <li data-lang-key="websites_feature2">Plateformes e-commerce</li>
@@ -108,15 +124,16 @@
                     </div>
                 </div>
 
-                <div class="service-card" data-service="mobile">
-                    <div class="service-icon">
+                <div class="service-card card-3d" data-service="mobile">
+                    <div class="service-icon pulse">
                         <svg class="icon" viewBox="0 0 24 24" width="48" height="48">
                             <rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect>
                             <path d="M12 18h.01"></path>
                         </svg>
                     </div>
-                    <h3 data-lang-key="mobile_apps">Applications Mobiles</h3>
-                    <p data-lang-key="mobile_apps_desc">Création d'applications mobiles ergonomiques et réactives pour iOS et Android, adaptées à vos besoins.</p>
+                    <h3 class="color-shift" data-lang-key="mobile_apps">Applications Mobiles</h3>
+                    <p data-lang-key="mobile_apps_desc">Création d'applications mobiles ergonomiques et réactives pour
+                        iOS et Android, adaptées à vos besoins.</p>
                     <ul class="service-features">
                         <li data-lang-key="mobile_apps_feature1">Applications natives iOS/Android</li>
                         <li data-lang-key="mobile_apps_feature2">Applications hybrides cross-platform</li>
@@ -132,8 +149,8 @@
                     </div>
                 </div>
 
-                <div class="service-card" data-service="design">
-                    <div class="service-icon">
+                <div class="service-card card-3d" data-service="design">
+                    <div class="service-icon pulse">
                         <svg class="icon" viewBox="0 0 24 24" width="48" height="48">
                             <path d="M12 19l7-7 3 3-7 7-3-3z"></path>
                             <path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"></path>
@@ -141,8 +158,9 @@
                             <path d="M11 11l5 5"></path>
                         </svg>
                     </div>
-                    <h3 data-lang-key="ux_ui_design">Design UX/UI</h3>
-                    <p data-lang-key="ux_ui_design_desc">Création d'interfaces utilisateur modernes et intuitives qui améliorent l'engagement et la conversion.</p>
+                    <h3 class="color-shift" data-lang-key="ux_ui_design">Design UX/UI</h3>
+                    <p data-lang-key="ux_ui_design_desc">Création d'interfaces utilisateur modernes et intuitives qui
+                        améliorent l'engagement et la conversion.</p>
                     <ul class="service-features">
                         <li data-lang-key="ux_ui_design_feature1">Audit et refonte UX</li>
                         <li data-lang-key="ux_ui_design_feature2">Design d'interfaces modernes</li>
@@ -177,7 +195,8 @@
                     <div class="step-number">01</div>
                     <div class="step-content">
                         <h3 data-lang-key="step1_title">Découverte & Analyse</h3>
-                        <p data-lang-key="step1_desc">Nous commençons par comprendre vos besoins, objectifs et contraintes pour définir une stratégie adaptée.</p>
+                        <p data-lang-key="step1_desc">Nous commençons par comprendre vos besoins, objectifs et
+                            contraintes pour définir une stratégie adaptée.</p>
                     </div>
                 </div>
 
@@ -185,7 +204,8 @@
                     <div class="step-number">02</div>
                     <div class="step-content">
                         <h3 data-lang-key="step2_title">Conception & Design</h3>
-                        <p data-lang-key="step2_desc">Nous créons des maquettes et prototypes interactifs pour visualiser votre projet avant le développement.</p>
+                        <p data-lang-key="step2_desc">Nous créons des maquettes et prototypes interactifs pour
+                            visualiser votre projet avant le développement.</p>
                     </div>
                 </div>
 
@@ -193,7 +213,8 @@
                     <div class="step-number">03</div>
                     <div class="step-content">
                         <h3 data-lang-key="step3_title">Développement</h3>
-                        <p data-lang-key="step3_desc">Notre équipe développe votre solution avec un code propre, optimisé et respectant les standards du web.</p>
+                        <p data-lang-key="step3_desc">Notre équipe développe votre solution avec un code propre,
+                            optimisé et respectant les standards du web.</p>
                     </div>
                 </div>
 
@@ -201,7 +222,8 @@
                     <div class="step-number">04</div>
                     <div class="step-content">
                         <h3 data-lang-key="step4_title">Tests & Validation</h3>
-                        <p data-lang-key="step4_desc">Nous testons rigoureusement chaque fonctionnalité pour garantir une expérience utilisateur sans faille.</p>
+                        <p data-lang-key="step4_desc">Nous testons rigoureusement chaque fonctionnalité pour garantir
+                            une expérience utilisateur sans faille.</p>
                     </div>
                 </div>
 
@@ -209,7 +231,8 @@
                     <div class="step-number">05</div>
                     <div class="step-content">
                         <h3 data-lang-key="step5_title">Déploiement & Suivi</h3>
-                        <p data-lang-key="step5_desc">Après la mise en ligne, nous assurons un suivi et proposons des améliorations continues.</p>
+                        <p data-lang-key="step5_desc">Après la mise en ligne, nous assurons un suivi et proposons des
+                            améliorations continues.</p>
                     </div>
                 </div>
             </div>
@@ -242,7 +265,9 @@
                             <div class="portfolio-info">
                                 <h3 data-lang-key="project1_title">E-commerce Luxe</h3>
                                 <p data-lang-key="project1_desc">Site e-commerce pour une marque de produits de luxe</p>
-                                <button class="portfolio-btn" data-project="project1" data-lang-key="view_project">Voir le projet</button>
+                                <button class="portfolio-btn" data-project="project1" data-lang-key="view_project">Voir
+                                    le projet
+                                </button>
                             </div>
                         </div>
                     </div>
@@ -255,7 +280,9 @@
                             <div class="portfolio-info">
                                 <h3 data-lang-key="project2_title">FitTrack Pro</h3>
                                 <p data-lang-key="project2_desc">Application mobile de suivi fitness et nutrition</p>
-                                <button class="portfolio-btn" data-project="project2" data-lang-key="view_project">Voir le projet</button>
+                                <button class="portfolio-btn" data-project="project2" data-lang-key="view_project">Voir
+                                    le projet
+                                </button>
                             </div>
                         </div>
                     </div>
@@ -268,7 +295,9 @@
                             <div class="portfolio-info">
                                 <h3 data-lang-key="project3_title">BankEase</h3>
                                 <p data-lang-key="project3_desc">Refonte UX/UI pour une application bancaire</p>
-                                <button class="portfolio-btn" data-project="project3" data-lang-key="view_project">Voir le projet</button>
+                                <button class="portfolio-btn" data-project="project3" data-lang-key="view_project">Voir
+                                    le projet
+                                </button>
                             </div>
                         </div>
                     </div>
@@ -281,7 +310,9 @@
                             <div class="portfolio-info">
                                 <h3 data-lang-key="project4_title">EduConnect</h3>
                                 <p data-lang-key="project4_desc">Plateforme éducative pour cours en ligne</p>
-                                <button class="portfolio-btn" data-project="project4" data-lang-key="view_project">Voir le projet</button>
+                                <button class="portfolio-btn" data-project="project4" data-lang-key="view_project">Voir
+                                    le projet
+                                </button>
                             </div>
                         </div>
                     </div>
@@ -294,7 +325,9 @@
                             <div class="portfolio-info">
                                 <h3 data-lang-key="project5_title">ImmoScan</h3>
                                 <p data-lang-key="project5_desc">Application immobilière avec réalité augmentée</p>
-                                <button class="portfolio-btn" data-project="project5" data-lang-key="view_project">Voir le projet</button>
+                                <button class="portfolio-btn" data-project="project5" data-lang-key="view_project">Voir
+                                    le projet
+                                </button>
                             </div>
                         </div>
                     </div>
@@ -307,7 +340,9 @@
                             <div class="portfolio-info">
                                 <h3 data-lang-key="project6_title">DataViz Pro</h3>
                                 <p data-lang-key="project6_desc">Design d'interface pour dashboard analytique</p>
-                                <button class="portfolio-btn" data-project="project6" data-lang-key="view_project">Voir le projet</button>
+                                <button class="portfolio-btn" data-project="project6" data-lang-key="view_project">Voir
+                                    le projet
+                                </button>
                             </div>
                         </div>
                     </div>
@@ -330,7 +365,9 @@
                 <div class="testimonials-track">
                     <div class="testimonial-card">
                         <div class="testimonial-content">
-                            <p data-lang-key="testimonial1_content">"AAD Service a transformé notre présence en ligne avec un site web qui reflète parfaitement notre identité. Leur équipe a été à l'écoute et réactive tout au long du projet."</p>
+                            <p data-lang-key="testimonial1_content">"AAD Service a transformé notre présence en ligne
+                                avec un site web qui reflète parfaitement notre identité. Leur équipe a été à l'écoute
+                                et réactive tout au long du projet."</p>
                         </div>
                         <div class="testimonial-author">
                             <img src="img/test.png?height=60&width=60" alt="Sophie Martin" class="author-image">
@@ -343,7 +380,10 @@
 
                     <div class="testimonial-card">
                         <div class="testimonial-content">
-                            <p data-lang-key="testimonial2_content">"Notre application mobile développée par AAD Service a dépassé nos attentes. La qualité du code et l'expérience utilisateur sont exceptionnelles, ce qui nous a permis d'augmenter significativement notre engagement client."</p>
+                            <p data-lang-key="testimonial2_content">"Notre application mobile développée par AAD Service
+                                a dépassé nos attentes. La qualité du code et l'expérience utilisateur sont
+                                exceptionnelles, ce qui nous a permis d'augmenter significativement notre engagement
+                                client."</p>
                         </div>
                         <div class="testimonial-author">
                             <img src="img/AAD_Logo.png" alt="Thomas Dubois" class="author-image">
@@ -356,7 +396,9 @@
 
                     <div class="testimonial-card">
                         <div class="testimonial-content">
-                            <p data-lang-key="testimonial3_content">"Professionnalisme, expertise technique et créativité sont les mots qui définissent AAD Service. Ils ont su comprendre nos besoins et y répondre avec des solutions innovantes."</p>
+                            <p data-lang-key="testimonial3_content">"Professionnalisme, expertise technique et
+                                créativité sont les mots qui définissent AAD Service. Ils ont su comprendre nos besoins
+                                et y répondre avec des solutions innovantes."</p>
                         </div>
                         <div class="testimonial-author">
                             <img src="img/test.png?height=60&width=60" alt="Julie Leroy" class="author-image">
@@ -429,7 +471,9 @@
                         </ul>
                     </div>
                     <div class="pricing-cta">
-                        <button class="cta-button secondary-cta" onclick="scrollToSection('contact')" data-lang-key="request_quote">Demander un devis</button>
+                        <button class="cta-button secondary-cta" onclick="scrollToSection('contact')"
+                                data-lang-key="request_quote">Demander un devis
+                        </button>
                     </div>
                 </div>
 
@@ -455,7 +499,9 @@
                         </ul>
                     </div>
                     <div class="pricing-cta">
-                        <button class="cta-button primary-cta" onclick="scrollToSection('contact')" data-lang-key="request_quote">Demander un devis</button>
+                        <button class="cta-button primary-cta" onclick="scrollToSection('contact')"
+                                data-lang-key="request_quote">Demander un devis
+                        </button>
                     </div>
                 </div>
 
@@ -480,7 +526,9 @@
                         </ul>
                     </div>
                     <div class="pricing-cta">
-                        <button class="cta-button secondary-cta" onclick="scrollToSection('contact')" data-lang-key="request_quote">Demander un devis</button>
+                        <button class="cta-button secondary-cta" onclick="scrollToSection('contact')"
+                                data-lang-key="request_quote">Demander un devis
+                        </button>
                     </div>
                 </div>
             </div>
@@ -505,7 +553,8 @@
                     </p>
                     <p data-lang-key="about_p1">
                         Notre équipe s'est agrandie, mais notre mission reste la même : transformer les idées
-                        innovantes en produits digitaux exceptionnels qui répondent aux besoins spécifiques de nos clients.
+                        innovantes en produits digitaux exceptionnels qui répondent aux besoins spécifiques de nos
+                        clients.
                     </p>
                     <p data-lang-key="about_p2">
                         Chez AAD Service, nous croyons que la technologie doit servir l'humain, et non l'inverse.
@@ -533,15 +582,18 @@
                         <div class="values-grid">
                             <div class="value-item">
                                 <h4 data-lang-key="value1_title">Innovation</h4>
-                                <p data-lang-key="value1_desc">Nous explorons constamment de nouvelles technologies pour offrir des solutions avant-gardistes.</p>
+                                <p data-lang-key="value1_desc">Nous explorons constamment de nouvelles technologies pour
+                                    offrir des solutions avant-gardistes.</p>
                             </div>
                             <div class="value-item">
                                 <h4 data-lang-key="value2_title">Excellence</h4>
-                                <p data-lang-key="value2_desc">Nous visons l'excellence dans chaque ligne de code et chaque pixel de design.</p>
+                                <p data-lang-key="value2_desc">Nous visons l'excellence dans chaque ligne de code et
+                                    chaque pixel de design.</p>
                             </div>
                             <div class="value-item">
                                 <h4 data-lang-key="value3_title">Collaboration</h4>
-                                <p data-lang-key="value3_desc">Nous travaillons en étroite collaboration avec nos clients pour garantir leur satisfaction.</p>
+                                <p data-lang-key="value3_desc">Nous travaillons en étroite collaboration avec nos
+                                    clients pour garantir leur satisfaction.</p>
                             </div>
                         </div>
                     </div>
@@ -667,9 +719,12 @@
                         </div>
                         <div class="form-group form-checkbox">
                             <input type="checkbox" id="privacy" required>
-                            <label for="privacy" data-lang-key="privacy_policy">J'accepte la politique de confidentialité</label>
+                            <label for="privacy" data-lang-key="privacy_policy">J'accepte la politique de
+                                confidentialité</label>
                         </div>
-                        <button type="submit" class="cta-button primary-cta" data-lang-key="send_message">Envoyer le message</button>
+                        <button type="submit" class="cta-button primary-cta" data-lang-key="send_message">Envoyer le
+                            message
+                        </button>
                     </form>
                     <div id="formSuccess" class="form-success">
                         <svg viewBox="0 0 24 24" width="48" height="48">
@@ -693,7 +748,8 @@
                     <img src="img/AAD_Logo.png" alt="AAD Service Logo" class="footer-logo-img">
                     <span>AAD Service</span>
                 </div>
-                <p data-lang-key="footer_description">Solutions digitales innovantes pour propulser votre entreprise vers le succès.</p>
+                <p data-lang-key="footer_description">Solutions digitales innovantes pour propulser votre entreprise
+                    vers le succès.</p>
             </div>
 
             <div class="footer-links">
@@ -804,7 +860,8 @@
                         <p id="projectYear"></p>
                     </div>
                 </div>
-                <a href="#" id="projectLink" class="cta-button secondary-cta" target="_blank" data-lang-key="visit_site">Visiter le site</a>
+                <a href="#" id="projectLink" class="cta-button secondary-cta" target="_blank"
+                   data-lang-key="visit_site">Visiter le site</a>
             </div>
         </div>
     </div>
@@ -818,5 +875,6 @@
 
 <script src="js/translations.js"></script>
 <script src="js/main.js"></script>
+<script src="js/animations.js"></script>
 </body>
 </html>

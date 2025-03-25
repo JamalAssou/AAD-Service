@@ -1,0 +1,623 @@
+/* ===== ANIMATIONS AVANCÉES ===== */
+
+/* Animation de particules */
+.particles-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    overflow: hidden;
+}
+
+.particle {
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(99, 102, 241, 0.3);
+    pointer-events: none;
+    z-index: -1;
+}
+
+/* Animations d'entrée */
+.fade-in-up {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.fade-in-up.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.fade-in-left {
+    opacity: 0;
+    transform: translateX(-30px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.fade-in-left.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.fade-in-right {
+    opacity: 0;
+    transform: translateX(30px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.fade-in-right.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.scale-in {
+    opacity: 0;
+    transform: scale(0.9);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.scale-in.visible {
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* Délais d'animation */
+.delay-100 { transition-delay: 0.1s; }
+.delay-200 { transition-delay: 0.2s; }
+.delay-300 { transition-delay: 0.3s; }
+.delay-400 { transition-delay: 0.4s; }
+.delay-500 { transition-delay: 0.5s; }
+
+/* Effet de parallaxe */
+.parallax {
+    transition: transform 0.5s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+/* Effet de flottement */
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-15px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+.float {
+    animation: float 6s ease-in-out infinite;
+}
+
+/* Effet de pulse */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        box-shadow: var(--glow);
+    }
+    50% {
+        transform: scale(1.05);
+        box-shadow: 0 0 25px rgba(99, 102, 241, 0.7);
+    }
+    100% {
+        transform: scale(1);
+        box-shadow: var(--glow);
+    }
+}
+
+.pulse {
+    animation: pulse 3s infinite;
+}
+
+/* Effet de rotation */
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.rotate {
+    animation: rotate 20s linear infinite;
+}
+
+/* Effet de morphing pour les formes */
+@keyframes morphShape {
+    0% {
+        border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+    }
+    25% {
+        border-radius: 58% 42% 75% 25% / 76% 46% 54% 24%;
+    }
+    50% {
+        border-radius: 50% 50% 33% 67% / 55% 27% 73% 45%;
+    }
+    75% {
+        border-radius: 33% 67% 58% 42% / 63% 68% 32% 37%;
+    }
+    100% {
+        border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+    }
+}
+
+.morph {
+    animation: morphShape 15s linear infinite alternate;
+}
+
+/* Effet de glitch */
+@keyframes glitch {
+    0% {
+        transform: translate(0);
+    }
+    20% {
+        transform: translate(-2px, 2px);
+    }
+    40% {
+        transform: translate(-2px, -2px);
+    }
+    60% {
+        transform: translate(2px, 2px);
+    }
+    80% {
+        transform: translate(2px, -2px);
+    }
+    100% {
+        transform: translate(0);
+    }
+}
+
+.glitch {
+    position: relative;
+}
+
+.glitch:hover::before,
+.glitch:hover::after {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.8;
+}
+
+.glitch:hover::before {
+    color: var(--accent);
+    animation: glitch 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) both infinite;
+    z-index: -1;
+}
+
+.glitch:hover::after {
+    color: var(--primary);
+    animation: glitch 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) reverse both infinite;
+    z-index: -2;
+}
+
+/* Effet de surlignage */
+.highlight-animation {
+    position: relative;
+    display: inline-block;
+}
+
+.highlight-animation::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--accent);
+    transition: width 0.3s ease;
+}
+
+.highlight-animation:hover::after {
+    width: 100%;
+}
+
+/* Effet de néon */
+.neon {
+    text-shadow: 0 0 5px rgba(99, 102, 241, 0.5), 0 0 10px rgba(99, 102, 241, 0.3);
+    transition: text-shadow 0.3s ease;
+}
+
+.neon:hover {
+    text-shadow: 0 0 10px rgba(99, 102, 241, 0.8), 0 0 20px rgba(99, 102, 241, 0.5), 0 0 30px rgba(99, 102, 241, 0.3);
+}
+
+/* Effet de gradient animé */
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.gradient-animation {
+    background: linear-gradient(-45deg, var(--primary), var(--primary-dark), var(--accent), var(--primary-light));
+    background-size: 400% 400%;
+    animation: gradientAnimation 15s ease infinite;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Effet de vague */
+.wave {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: url('data:image/svg+xml;utf8,<svg viewBox="0 0 1440 320" xmlns="http://www.w3.org/2000/svg"><path fill="%236366f1" fill-opacity="0.2" d="M0,192L48,197.3C96,203,192,213,288,229.3C384,245,480,267,576,250.7C672,235,768,181,864,181.3C960,181,1056,235,1152,234.7C1248,235,1344,181,1392,154.7L1440,128L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+/* Effet de curseur personnalisé */
+.custom-cursor {
+    position: fixed;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: rgba(99, 102, 241, 0.5);
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+    transition: width 0.3s, height 0.3s, background-color 0.3s;
+}
+
+.custom-cursor.active {
+    width: 50px;
+    height: 50px;
+    background-color: rgba(99, 102, 241, 0.2);
+}
+
+/* Effet de carte 3D */
+.card-3d {
+    transition: transform 0.5s ease;
+    transform-style: preserve-3d;
+}
+
+.card-3d:hover {
+    transform: perspective(1000px) rotateX(5deg) rotateY(5deg);
+}
+
+/* Effet de défilement fluide */
+.smooth-scroll {
+    scroll-behavior: smooth;
+}
+
+/* Effet de texte qui s'écrit */
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+
+@keyframes blink {
+    50% { border-color: transparent }
+}
+
+.typing-effect {
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 3px solid var(--primary);
+    animation:
+            typing 3.5s steps(40, end),
+            blink 1s step-end infinite;
+}
+
+/* Effet de dévoilement */
+.reveal {
+    position: relative;
+    overflow: hidden;
+}
+
+.reveal::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--primary);
+    transform: translateX(-100%);
+    animation: reveal 1.5s ease forwards;
+}
+
+@keyframes reveal {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+/* Effet de distorsion au survol */
+.distort {
+    transition: transform 0.3s ease;
+}
+
+.distort:hover {
+    transform: skew(-5deg, 0deg) scale(1.05);
+}
+
+/* Effet de rebond */
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-20px);
+    }
+    60% {
+        transform: translateY(-10px);
+    }
+}
+
+.bounce {
+    animation: bounce 2s infinite;
+}
+
+/* Effet de zoom au survol */
+.zoom-on-hover {
+    transition: transform 0.3s ease;
+}
+
+.zoom-on-hover:hover {
+    transform: scale(1.1);
+}
+
+/* Effet de filtre au survol */
+.filter-on-hover {
+    filter: grayscale(100%);
+    transition: filter 0.5s ease;
+}
+
+.filter-on-hover:hover {
+    filter: grayscale(0%);
+}
+
+/* Effet de déplacement de fond */
+@keyframes backgroundMove {
+    0% {
+        background-position: 0% 0%;
+    }
+    100% {
+        background-position: 100% 100%;
+    }
+}
+
+.moving-bg {
+    background-size: 200% 200%;
+    animation: backgroundMove 10s linear infinite alternate;
+}
+
+/* Effet de scintillement */
+@keyframes twinkle {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.5;
+    }
+}
+
+.twinkle {
+    animation: twinkle 2s ease-in-out infinite;
+}
+
+/* Effet de secousse */
+@keyframes shake {
+    0%, 100% {
+        transform: translateX(0);
+    }
+    10%, 30%, 50%, 70%, 90% {
+        transform: translateX(-5px);
+    }
+    20%, 40%, 60%, 80% {
+        transform: translateX(5px);
+    }
+}
+
+.shake:hover {
+    animation: shake 0.5s ease-in-out;
+}
+
+/* Effet de flip */
+@keyframes flip {
+    0% {
+        transform: perspective(400px) rotateY(0);
+    }
+    100% {
+        transform: perspective(400px) rotateY(180deg);
+    }
+}
+
+.flip {
+    backface-visibility: visible !important;
+    animation: flip 1s ease-in-out;
+}
+
+/* Effet de déplacement de texte */
+.marquee {
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.marquee span {
+    display: inline-block;
+    padding-left: 100%;
+    animation: marquee 15s linear infinite;
+}
+
+@keyframes marquee {
+    0% {
+        transform: translate(0, 0);
+    }
+    100% {
+        transform: translate(-100%, 0);
+    }
+}
+
+/* Effet de dégradé de texte */
+.text-gradient {
+    background: linear-gradient(90deg, var(--primary), var(--accent));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Effet de bordure animée */
+@keyframes borderAnimation {
+    0% {
+        border-color: var(--primary);
+    }
+    50% {
+        border-color: var(--accent);
+    }
+    100% {
+        border-color: var(--primary);
+    }
+}
+
+.animated-border {
+    border: 2px solid var(--primary);
+    animation: borderAnimation 3s infinite;
+}
+
+/* Effet de déplacement d'ombre */
+@keyframes shadowMove {
+    0% {
+        box-shadow: -5px 5px 15px rgba(99, 102, 241, 0.3);
+    }
+    50% {
+        box-shadow: 5px -5px 15px rgba(34, 211, 238, 0.3);
+    }
+    100% {
+        box-shadow: -5px 5px 15px rgba(99, 102, 241, 0.3);
+    }
+}
+
+.shadow-move {
+    animation: shadowMove 3s infinite;
+}
+
+/* Effet de déplacement de fond */
+@keyframes bgPan {
+    0% {
+        background-position: 0% center;
+    }
+    100% {
+        background-position: -200% center;
+    }
+}
+
+.bg-pan {
+    background: linear-gradient(90deg, var(--bg-dark), var(--primary-dark), var(--bg-dark));
+    background-size: 200% 100%;
+    animation: bgPan 15s linear infinite;
+}
+
+/* Effet de déplacement de couleur */
+@keyframes hueRotate {
+    0% {
+        filter: hue-rotate(0deg);
+    }
+    100% {
+        filter: hue-rotate(360deg);
+    }
+}
+
+.hue-rotate {
+    animation: hueRotate 10s linear infinite;
+}
+
+/* Effet de déplacement de texte */
+@keyframes textWave {
+    0%, 100% {
+        transform: translateY(0);
+    }
+}
+
+.text-wave span {
+    display: inline-block;
+    animation: textWave 1.5s ease-in-out infinite;
+}
+
+.text-wave span:nth-child(1) { animation-delay: 0.0s; }
+.text-wave span:nth-child(2) { animation-delay: 0.1s; }
+.text-wave span:nth-child(3) { animation-delay: 0.2s; }
+.text-wave span:nth-child(4) { animation-delay: 0.3s; }
+.text-wave span:nth-child(5) { animation-delay: 0.4s; }
+.text-wave span:nth-child(6) { animation-delay: 0.5s; }
+.text-wave span:nth-child(7) { animation-delay: 0.6s; }
+.text-wave span:nth-child(8) { animation-delay: 0.7s; }
+.text-wave span:nth-child(9) { animation-delay: 0.8s; }
+.text-wave span:nth-child(10) { animation-delay: 0.9s; }
+
+/* Effet de déplacement de fond */
+.bg-shift {
+    background-size: 400% 400%;
+    animation: gradientAnimation 15s ease infinite;
+}
+
+/* Effet de déplacement de couleur */
+@keyframes colorShift {
+    0% {
+        color: var(--primary);
+    }
+    50% {
+        color: var(--accent);
+    }
+    100% {
+        color: var(--primary);
+    }
+}
+
+.color-shift {
+    animation: colorShift 3s infinite;
+}
+
+/* Effet de déplacement de bordure */
+@keyframes borderDance {
+    0% {
+        border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+    }
+    50% {
+        border-radius: 70% 30% 30% 70% / 70% 70% 30% 30%;
+    }
+    100% {
+        border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+    }
+}
+
+.border-dance {
+    animation: borderDance 8s ease infinite;
+}
+
+/* Effet de déplacement de fond */
+.bg-noise {
+    position: relative;
+}
+
+.bg-noise::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.05;
+    z-index: -1;
+    background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMDAiIGhlaWdodD0iMzAwIj48ZmlsdGVyIGlkPSJhIiB4PSIwIiB5PSIwIj48ZmVUdXJidWxlbmNlIGJhc2VGcmVxdWVuY3k9Ii43NSIgc3RpdGNoVGlsZXM9InN0aXRjaCIgdHlwZT0iZnJhY3RhbE5vaXNlIi8+PGZlQ29sb3JNYXRyaXggdHlwZT0ic2F0dXJhdGUiIHZhbHVlcz0iMCIvPjwvZmlsdGVyPjxwYXRoIGQ9Ik0wIDBoMzAwdjMwMEgweiIgZmlsdGVyPSJ1cmwoI2EpIiBvcGFjaXR5PSIuMDUiLz48L3N2Zz4=');
+}

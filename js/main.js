@@ -183,8 +183,14 @@ document.addEventListener('DOMContentLoaded', () => {
         portfolioItems.forEach(item => {
             if (category === 'all' || item.dataset.category === category) {
                 item.style.display = 'block';
+                setTimeout(() => {
+                    item.classList.add('visible');
+                }, 100);
             } else {
-                item.style.display = 'none';
+                item.classList.remove('visible');
+                setTimeout(() => {
+                    item.style.display = 'none';
+                }, 500);
             }
         });
     }
