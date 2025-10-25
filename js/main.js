@@ -211,15 +211,16 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // Scroll vers une section
-    function scrollToSection(sectionId) {
+    /*function scrollToSection(sectionId) {
         const section = document.getElementById(sectionId);
+        console.log("section id->",sectionId);
         if (section) {
             window.scrollTo({
                 top: section.offsetTop - 100,
                 behavior: 'smooth'
             });
         }
-    }
+    }*/
 
     // Filtrer les éléments du portfolio
     function filterPortfolio(category) {
@@ -597,13 +598,12 @@ document.addEventListener('DOMContentLoaded', () => {
     initTestimonialsSlider();
 
     // Fonction pour naviguer vers une section depuis n'importe où
-    window.goToContactSection = function() {
-        scrollToSection('contact');
-    };
+    /*document.addEventListener('DOMContentLoaded', () => {
+        window.goToContactSection = function() {
+            scrollToSection('contact');
+        };
+    })*/
 
-    window.scrollToSection = scrollToSection;
-
-    // Appliquer les animations initiales
     handleScroll();
 
     // Charger la langue préférée

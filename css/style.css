@@ -1181,6 +1181,26 @@ input:checked + .slider:before {
     margin-bottom: 0;
 }
 
+.about-h3 {
+    text-align: center;           /* centre le texte horizontalement */
+    font-size: 2rem;              /* taille du titre */
+    font-weight: 700;             /* met le titre en gras */
+    margin: 2rem 0 1.5rem;        /* espace autour du titre */
+    position: relative;           /* permet d’ajouter un effet décoratif si tu veux */
+    letter-spacing: 1px;          /* léger espacement entre les lettres */
+}
+
+.about-h3::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 3px;
+    background: var(--primary); /* couleur accent, par exemple rouge */
+    margin: 0.5rem auto 0;
+    border-radius: 2px;
+}
+
+
 /* ===== CONTACT SECTION ===== */
 .contact-grid {
     display: grid;
@@ -1244,6 +1264,14 @@ input:checked + .slider:before {
     justify-content: center;
     color: var(--text);
     transition: var(--transition);
+}
+
+.social-icon svg {
+    width: 22px;
+    height: 22px;
+    fill: var(--text);
+    stroke: var(--text);
+    transition: fill 0.3s ease, stroke 0.3s ease;
 }
 
 .social-icon:hover {
@@ -1747,4 +1775,53 @@ textarea.form-control {
     .modal-body {
         padding: 2rem 1.5rem;
     }
+
+    /* ===== ABOUT ENHANCEMENTS ===== */
+    .about-text p {
+        opacity: 0;
+        transform: translateY(20px);
+        transition: all 0.8s ease;
+    }
+
+    .about-text p.visible {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    .highlight {
+        color: var(--primary);
+        font-weight: 600;
+    }
+
+    .section-separator {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 3rem 0 2rem;
+        color: var(--primary);
+        opacity: 0.8;
+    }
+
+    .section-separator .line {
+        width: 60px;
+        height: 2px;
+        background: var(--card-bg);
+        margin: 0 1rem;
+        border-radius: 2px;
+    }
+
+    .separator-icon {
+        font-size: 1.5rem;
+    }
+
+    /* Responsive ajustement */
+    @media (max-width: 768px) {
+        .section-separator {
+            margin: 2rem 0;
+        }
+        .section-separator .line {
+            width: 40px;
+        }
+    }
+
 }

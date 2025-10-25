@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
           content="AAD Service - Solutions digitales sur mesure pour votre entreprise. Développement web, applications mobiles et stratégie digitale.">
-    <title>AAD Service - Solutions Digitales Innovantes</title>
+    <title>AAD Services - Solutions Digitales Innovantes</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="icon" href="img/AAD_Logo.png" type="image/x-icon">
 </head>
@@ -13,8 +13,8 @@
 <header class="header">
     <nav class="navbar">
         <div class="logo">
-            <img src="img/AAD_Logo.png" alt="AAD Service Logo" class="navbar-logo"/>
-            <a href="#hero" class="text-gradient">AAD Service</a>
+            <img src="img/AAD_Logo.png" alt="AAD Services Logo" class="navbar-logo"/>
+            <a href="#hero" class="text-gradient">AAD Services</a>
         </div>
         <div class="nav-links">
             <a href="#services" class="nav-link highlight-animation" data-lang-key="nav_services">Services</a>
@@ -28,9 +28,9 @@
         </div>
 
         <div class="nav-right">
-            <button class="cta-button primary-cta pulse" onclick="goToContactSection()" data-lang-key="discuss_project">
+            <!--<button class="cta-button primary-cta pulse" onclick="goToContactSection()" data-lang-key="discuss_project">
                 Discutons de votre projet
-            </button>
+            </button>-->
             <div class="lang-selector">
                 <button class="lang-btn active" data-lang="fr">FR</button>
                 <button class="lang-btn" data-lang="en">EN</button>
@@ -484,9 +484,9 @@
                             </ul>
                         </div>
                         <div class="pricing-cta">
-                            <button class="cta-button secondary-cta" onclick="scrollToSection('contact')"
+                            <a href="#contact" class="cta-button secondary-cta" onclick="scrollToSection('contact')"
                                     data-lang-key="request_quote">Demander un devis
-                            </button>
+                            </a>
                         </div>
                     </div>
 
@@ -512,9 +512,9 @@
                             </ul>
                         </div>
                         <div class="pricing-cta">
-                            <button class="cta-button primary-cta" onclick="scrollToSection('contact')"
+                            <a href="#contact" class="cta-button primary-cta" onclick="scrollToSection('contact')"
                                     data-lang-key="request_quote">Demander un devis
-                            </button>
+                            </a>
                         </div>
                     </div>
 
@@ -539,9 +539,9 @@
                             </ul>
                         </div>
                         <div class="pricing-cta">
-                            <button class="cta-button secondary-cta" onclick="scrollToSection('contact')"
+                            <a href="#contact" class="cta-button secondary-cta" onclick="scrollToSection('contact')"
                                     data-lang-key="request_quote">Demander un devis
-                            </button>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -557,11 +557,11 @@
 
                 <div class="about-grid">
                     <div class="about-image">
-                        <img src="img/AAD_Logo.png" alt="L'équipe AAD Service">
+                        <img src="img/AAD_Logo.png" alt="L'équipe AAD Services">
                     </div>
                     <div class="about-content">
                         <p class="about-intro" data-lang-key="about_intro">
-                            Fondée en 2018, AAD Service est née de la passion commune de trois experts du numérique
+                            Fondée en 2018, AAD Services est née de la passion commune de trois experts du numérique
                             désireux de créer des solutions technologiques qui changent la donne.
                         </p>
                         <p data-lang-key="about_p1">
@@ -570,11 +570,13 @@
                             clients.
                         </p>
                         <p data-lang-key="about_p2">
-                            Chez AAD Service, nous croyons que la technologie doit servir l'humain, et non l'inverse.
+                            Chez AAD Services, nous croyons que la technologie doit servir l'humain, et non l'inverse.
                             C'est pourquoi chacun de nos projets est conçu avec une approche centrée sur l'utilisateur,
                             garantissant des expériences intuitives et agréables.
                         </p>
 
+                        <!--Statics Count for the company (rollback if there are some statistic)-->
+                        <!--
                         <div class="stats-grid">
                             <div class="stat-card">
                                 <div class="stat-number" data-count="200">0</div>
@@ -589,24 +591,30 @@
                                 <div class="stat-label" data-lang-key="satisfied_clients">Clients satisfaits</div>
                             </div>
                         </div>
-
+                        -->
                         <div class="team-values">
-                            <h3 data-lang-key="our_values">Nos valeurs</h3>
+                            <h3 class="about-h3" data-lang-key="our_values">Nos valeurs</h3>
                             <div class="values-grid">
-                                <div class="value-item">
-                                    <h4 data-lang-key="value1_title">Innovation</h4>
-                                    <p data-lang-key="value1_desc">Nous explorons constamment de nouvelles technologies pour
-                                        offrir des solutions avant-gardistes.</p>
+                                <div class="stat-card">
+                                    <div class="value-item">
+                                        <h4 data-lang-key="value1_title">Innovation</h4>
+                                        <p data-lang-key="value1_desc">Nous explorons constamment de nouvelles technologies pour
+                                            offrir des solutions avant-gardistes.</p>
+                                    </div>
                                 </div>
-                                <div class="value-item">
-                                    <h4 data-lang-key="value2_title">Excellence</h4>
-                                    <p data-lang-key="value2_desc">Nous visons l'excellence dans chaque ligne de code et
-                                        chaque pixel de design.</p>
+                                <div class="stat-card">
+                                    <div class="value-item">
+                                        <h4 data-lang-key="value2_title">Excellence</h4>
+                                        <p data-lang-key="value2_desc">Nous visons l'excellence dans chaque ligne de code et
+                                            chaque pixel de design.</p>
+                                    </div>
                                 </div>
-                                <div class="value-item">
-                                    <h4 data-lang-key="value3_title">Collaboration</h4>
-                                    <p data-lang-key="value3_desc">Nous travaillons en étroite collaboration avec nos
-                                        clients pour garantir leur satisfaction.</p>
+                                <div class="stat-card">
+                                    <div class="value-item">
+                                        <h4 data-lang-key="value3_title">Collaboration</h4>
+                                        <p data-lang-key="value3_desc">Nous travaillons en étroite collaboration avec nos
+                                            clients pour garantir leur satisfaction.</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -696,9 +704,10 @@
                                 </a>
                                 <a href="#" class="social-icon" aria-label="Instagram">
                                     <svg viewBox="0 0 24 24" width="24" height="24">
-                                        <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
-                                        <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
-                                        <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                                        <path fill="none" stroke="currentColor" stroke-width="2"
+                                              d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5z" />
+                                        <circle cx="12" cy="12" r="3.5" fill="none" stroke="currentColor" stroke-width="2" />
+                                        <circle cx="17.5" cy="6.5" r="0.8" fill="currentColor" />
                                     </svg>
                                 </a>
                                 <a href="#" class="social-icon" aria-label="Facebook">
@@ -709,8 +718,7 @@
                             </div>
                         </div>
                     </div>
-
-                    <div class="contact-form">
+                    <!--<div class="contact-form">
                         <form id="contactForm">
                             <div class="form-row">
                                 <div class="form-group">
@@ -747,7 +755,7 @@
                             <h3 data-lang-key="message_sent">Message envoyé !</h3>
                             <p data-lang-key="will_reply_soon">Nous vous répondrons dans les plus brefs délais.</p>
                         </div>
-                    </div>
+                    </div>-->
                 </div>
             </div>
         </section>
@@ -758,8 +766,8 @@
             <div class="footer-grid">
                 <div class="footer-info">
                     <div class="footer-logo">
-                        <img src="img/AAD_Logo.png" alt="AAD Service Logo" class="footer-logo-img">
-                        <span>AAD Service</span>
+                        <img src="img/AAD_Logo.png" alt="AAD Services Logo" class="footer-logo-img">
+                        <span>AAD Services</span>
                     </div>
                     <p data-lang-key="footer_description">Solutions digitales innovantes pour propulser votre entreprise
                         vers le succès.</p>
@@ -779,8 +787,8 @@
                         <h4 data-lang-key="company">Entreprise</h4>
                         <ul>
                             <li><a href="#about" data-lang-key="about_us">À propos</a></li>
-                            <li><a href="#portfolio" data-lang-key="portfolio">Portfolio</a></li>
-                            <li><a href="#testimonials" data-lang-key="testimonials">Témoignages</a></li>
+                            <!--<li><a href="#portfolio" data-lang-key="portfolio">Portfolio</a></li>
+                            <li><a href="#testimonials" data-lang-key="testimonials">Témoignages</a></li>-->
                         </ul>
                     </div>
 
@@ -788,15 +796,15 @@
                         <h4 data-lang-key="support">Support</h4>
                         <ul>
                             <li><a href="#contact" data-lang-key="contact_us">Contact</a></li>
-                            <li><a href="#" data-lang-key="faq">FAQ</a></li>
-                            <li><a href="#" data-lang-key="privacy_policy_page">Politique de confidentialité</a></li>
+                            <!--<li><a href="#" data-lang-key="faq">FAQ</a></li>
+                            <li><a href="#" data-lang-key="privacy_policy_page">Politique de confidentialité</a></li>-->
                         </ul>
                     </div>
                 </div>
             </div>
 
             <div class="footer-bottom">
-                <p data-lang-key="copyright">&copy; 2023 AAD Service. Tous droits réservés.</p>
+                <p data-lang-key="copyright">&copy; 2025 AAD Services. Tous droits réservés.</p>
                 <div class="footer-social">
                     <a href="#" aria-label="LinkedIn">
                         <svg viewBox="0 0 24 24" width="20" height="20">
@@ -812,9 +820,9 @@
                     </a>
                     <a href="#" aria-label="Instagram">
                         <svg viewBox="0 0 24 24" width="20" height="20">
-                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
-                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
-                            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5" fill="none" stroke="#000000" stroke-width="2"></rect>
+                            <circle cx="12" cy="12" r="4" fill="none" stroke="#000000" stroke-width="2"></circle>
+                            <circle cx="17.5" cy="6.5" r="1" fill="#000000"></circle>
                         </svg>
                     </a>
                     <a href="#" aria-label="Facebook">
