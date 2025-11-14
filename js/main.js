@@ -16,39 +16,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const statNumbers = document.querySelectorAll('.stat-number');
     const langButtons = document.querySelectorAll('.lang-btn');
 
-    const promoBanner = document.getElementById('promo-banner');
-    const closeButton = document.getElementById('close-promo');
-
-    // Vérifier si l'utilisateur a déjà fermé la notification
-    const isPromoClosed = localStorage.getItem('promoClosed');
-
     // Modals
     const serviceModal = document.getElementById('serviceModal');
     const projectModal = document.getElementById('projectModal');
     const modalCloseButtons = document.querySelectorAll('.modal-close');
-
-
-    if (isPromoClosed) {
-        promoBanner.style.display = 'none';
-        document.querySelector('.header').style.top = '0';
-        document.querySelector('.hero').style.paddingTop = '100px';
-    }
-
-    closeButton.addEventListener('click', function() {
-        // Animation de fermeture
-        promoBanner.style.animation = 'slideUp 0.5s ease-out forwards';
-
-        setTimeout(function() {
-            promoBanner.style.display = 'none';
-
-            // Ajuster la position du header et du hero
-            document.querySelector('.header').style.top = '0';
-            document.querySelector('.hero').style.paddingTop = '100px';
-
-            // Enregistrer que l'utilisateur a fermé la notification
-            sessionStorage.setItem('promoClosed', 'true');
-        }, 500);
-    });
 
     // Ajouter l'animation de fermeture
     const style = document.createElement('style');
