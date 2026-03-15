@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Mentions légales d'AAD Services SRL — Informations légales, RGPD, hébergement et droits d'auteur.">
+    <meta name="robots" content="noindex, follow">
+    <title>Mentions Légales — AAD Services</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="img/AAD_Logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        /* ===== PAGE-SPECIFIC STYLES ===== */
+        .ml-header {
+            background: rgba(26, 26, 26, 0.98);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(255, 77, 77, 0.2);
+            padding: 1.5rem 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            max-width: 100%;
+        }
+
+        .ml-logo {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            text-decoration: none;
+        }
+
+        .ml-logo img {
+            height: 36px;
+            width: auto;
+        }
+
+        .ml-logo span {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: #fff;
+        }
+
+        .ml-back-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: rgba(255, 77, 77, 0.15);
+            color: #ff4d4d;
+            border: 1px solid rgba(255, 77, 77, 0.3);
+            padding: 0.5rem 1.1rem;
+            border-radius: 50px;
+            font-size: 0.875rem;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .ml-back-btn:hover {
+            background: #ff4d4d;
+            color: white;
+            border-color: #ff4d4d;
+        }
+
+        .ml-page-hero {
+            background: linear-gradient(135deg, rgba(255, 77, 77, 0.12) 0%, rgba(26, 26, 26, 0) 60%);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            padding: 3.5rem 2rem 2.5rem;
+            text-align: center;
+        }
+
+        .ml-page-hero .section-tag {
+            margin-bottom: 1rem;
+        }
+
+        .ml-page-hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .ml-page-hero p {
+            color: rgba(255, 255, 255, 0.55);
+            font-size: 0.9rem;
+            margin-bottom: 0;
+        }
+
+        .ml-content {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 3rem 2rem 5rem;
+        }
+
+        .ml-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .ml-card {
+            background: rgba(255, 255, 255, 0.07);
+            border-radius: 12px;
+            padding: 2rem;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            transition: all 0.3s ease;
+        }
+
+        .ml-card:hover {
+            background: rgba(255, 255, 255, 0.12);
+            border-color: rgba(255, 77, 77, 0.25);
+            transform: translateY(-3px);
+        }
+
+        .ml-card-icon {
+            font-size: 1.75rem;
+            color: #ff4d4d;
+            margin-bottom: 1rem;
+        }
+
+        .ml-card h2 {
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+            color: #fff;
+            font-weight: 700;
+            padding-bottom: 0.75rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .ml-card p {
+            font-size: 0.875rem;
+            color: rgba(255, 255, 255, 0.65);
+            line-height: 1.75;
+            margin-bottom: 0.75rem;
+        }
+
+        .ml-card p:last-child {
+            margin-bottom: 0;
+        }
+
+        .ml-card a {
+            color: #ff4d4d;
+            text-decoration: none;
+        }
+
+        .ml-card a:hover {
+            text-decoration: underline;
+        }
+
+        /* RGPD special card */
+        .ml-card.rgpd {
+            grid-column: 1 / -1;
+            background: rgba(105, 219, 124, 0.05);
+            border-color: rgba(105, 219, 124, 0.2);
+            display: grid;
+            grid-template-columns: auto 1fr;
+            grid-template-rows: auto auto auto;
+            gap: 0 1.5rem;
+        }
+
+        .ml-card.rgpd:hover {
+            background: rgba(105, 219, 124, 0.08);
+            border-color: rgba(105, 219, 124, 0.35);
+        }
+
+        .ml-card.rgpd .ml-card-icon {
+            grid-row: 1 / 2;
+            grid-column: 1 / 2;
+            align-self: center;
+        }
+
+        .ml-card.rgpd h2 {
+            grid-row: 1 / 2;
+            grid-column: 2 / 3;
+            align-self: center;
+            margin-bottom: 0;
+            border-bottom: none;
+            padding-bottom: 0;
+        }
+
+        .ml-card.rgpd .rgpd-body {
+            grid-row: 2 / 3;
+            grid-column: 1 / -1;
+            border-top: 1px solid rgba(255, 255, 255, 0.07);
+            padding-top: 1.25rem;
+            margin-top: 1rem;
+        }
+
+        .rgpd-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: rgba(105, 219, 124, 0.15);
+            color: #69db7c;
+            border: 1px solid rgba(105, 219, 124, 0.35);
+            padding: 0.4rem 0.9rem;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .rgpd-cols {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+        }
+
+        .rgpd-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .rgpd-list li {
+            font-size: 0.85rem;
+            color: rgba(255, 255, 255, 0.6);
+            padding: 0.3rem 0;
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+        }
+
+        .rgpd-list li .fa-xmark {
+            color: #ff6b6b;
+            font-size: 0.75rem;
+            flex-shrink: 0;
+        }
+
+        .rgpd-note {
+            font-size: 0.8rem !important;
+            color: rgba(255, 255, 255, 0.4) !important;
+            font-style: italic;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            padding-top: 0.75rem;
+            margin-top: 0.5rem;
+        }
+
+        .ml-update-bar {
+            text-align: center;
+            margin-top: 3rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.07);
+            color: rgba(255, 255, 255, 0.3);
+            font-size: 0.8rem;
+        }
+
+        .ml-update-bar a {
+            color: #ff4d4d;
+            text-decoration: none;
+        }
+
+        .ml-update-bar a:hover {
+            text-decoration: underline;
+        }
+
+        /* Footer */
+        .ml-footer {
+            background: rgba(0, 0, 0, 0.25);
+            border-top: 1px solid rgba(255, 255, 255, 0.06);
+            text-align: center;
+            padding: 1.5rem 2rem;
+            color: rgba(255, 255, 255, 0.35);
+            font-size: 0.8rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 900px) {
+            .ml-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .ml-card.rgpd {
+                grid-column: 1 / -1;
+            }
+
+            .rgpd-cols {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .ml-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .ml-card.rgpd {
+                grid-template-columns: 1fr;
+            }
+
+            .ml-card.rgpd .ml-card-icon,
+            .ml-card.rgpd h2 {
+                grid-column: 1;
+                grid-row: auto;
+            }
+
+            .ml-page-hero h1 {
+                font-size: 1.8rem;
+            }
+
+            .ml-header {
+                padding: 1rem 1.25rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="ml-header">
+        <a href="index.html" class="ml-logo">
+            <img src="img/AAD_Logo.png" alt="AAD Services Logo">
+            <span>AAD Services</span>
+        </a>
+        <a href="index.html" class="ml-back-btn">
+            <i class="fa-solid fa-arrow-left"></i> Retour au site
+        </a>
+    </header>
+
+    <!-- Hero -->
+    <div class="ml-page-hero">
+        <span class="section-tag">Conformité &amp; Légal</span>
+        <h1>Mentions Légales</h1>
+        <p>Conformément aux obligations légales en vigueur en Belgique et au RGPD (Règlement UE 2016/679)</p>
+    </div>
+
+    <!-- Content -->
+    <main class="ml-content">
+
+        <!-- Row 1 : Éditeur · Responsable · Hébergement -->
+        <div class="ml-grid">
+
+            <div class="ml-card">
+                <div class="ml-card-icon"><i class="fa-solid fa-building"></i></div>
+                <h2>Éditeur du site</h2>
+                <p>
+                    <strong>AAD Services SRL</strong><br>
+                    Numéro d'entreprise : <strong>BE 1016.041.643</strong><br>
+                    Rue des Quatre-Vents 108<br>
+                    1080 Molenbeek-Saint-Jean, Belgique
+                </p>
+                <p>
+                    Téléphone : <a href="tel:+32465578734">+32 465 57 87 34</a><br>
+                    Email : <a href="mailto:aadservices@outlook.be">aadservices@outlook.be</a>
+                </p>
+                <p>
+                    Site web : <a href="https://aadservices.be" target="_blank" rel="noopener">aadservices.be</a>
+                </p>
+            </div>
+
+            <div class="ml-card">
+                <div class="ml-card-icon"><i class="fa-solid fa-user-tie"></i></div>
+                <h2>Responsable de publication</h2>
+                <p>
+                    Le responsable de la publication du présent site est le gérant de la société <strong>AAD Services
+                        SRL</strong>.
+                </p>
+                <p>
+                    Pour toute question relative au contenu du site, veuillez nous contacter à :<br>
+                    <a href="mailto:aadservices@outlook.be">aadservices@outlook.be</a>
+                </p>
+            </div>
+
+            <div class="ml-card">
+                <div class="ml-card-icon"><i class="fa-brands fa-github"></i></div>
+                <h2>Hébergement</h2>
+                <p>
+                    Le présent site est hébergé par <strong>GitHub Pages</strong>,<br>
+                    un service de <strong>GitHub, Inc.</strong>
+                </p>
+                <p>
+                    88 Colin P. Kelly Jr. Street<br>
+                    San Francisco, CA 94107, USA<br>
+                    <a href="https://github.com" target="_blank" rel="noopener">github.com</a>
+                </p>
+                <p>
+                    Politique de confidentialité GitHub :<br>
+                    <a href="https://docs.github.com/en/site-policy/privacy-policies/github-privacy-statement"
+                        target="_blank" rel="noopener">Voir la politique GitHub</a>
+                </p>
+            </div>
+
+        </div>
+
+        <!-- Row 2 : RGPD full-width card -->
+        <div class="ml-grid">
+            <div class="ml-card rgpd">
+                <div class="ml-card-icon"><i class="fa-solid fa-shield-halved"></i></div>
+                <h2>Protection des données personnelles (RGPD)</h2>
+                <div class="rgpd-body">
+                    <div class="rgpd-badge">
+                        <i class="fa-solid fa-circle-check"></i> Aucune donnée personnelle collectée
+                    </div>
+                    <div class="rgpd-cols">
+                        <div>
+                            <p>Ce site est <strong>purement informatif</strong>. Aucune donnée personnelle n'est
+                                collectée lors de votre navigation :</p>
+                            <ul class="rgpd-list">
+                                <li><i class="fa-solid fa-xmark"></i> Pas de formulaire de contact actif</li>
+                                <li><i class="fa-solid fa-xmark"></i> Pas de cookies tiers ou de tracking analytique
+                                </li>
+                                <li><i class="fa-solid fa-xmark"></i> Pas d'inscription ou de compte utilisateur</li>
+                                <li><i class="fa-solid fa-xmark"></i> Pas de publicité ciblée ou de profilage</li>
+                                <li><i class="fa-solid fa-xmark"></i> Pas de politique de confidentialité étendue
+                                    requise</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <p>Conformément au <strong>Règlement Général sur la Protection des Données</strong> (RGPD —
+                                Règlement UE 2016/679) :</p>
+                            <ul class="rgpd-list">
+                                <li><i class="fa-solid fa-circle-check" style="color:#69db7c"></i> Aucun traitement de
+                                    données à caractère personnel n'est effectué</li>
+                                <li><i class="fa-solid fa-circle-check" style="color:#69db7c"></i> Aucun cookie de suivi
+                                    n'est déposé sur votre terminal</li>
+                                <li><i class="fa-solid fa-circle-check" style="color:#69db7c"></i> Aucun transfert de
+                                    données vers des tiers n'est réalisé</li>
+                            </ul>
+                            <p class="rgpd-note">Si vous souhaitez exercer vos droits d'accès, de rectification ou de
+                                suppression (bien qu'aucune donnée ne soit collectée), vous pouvez nous contacter à : <a
+                                    href="mailto:aadservices@outlook.be">aadservices@outlook.be</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Row 3 : Propriété intellectuelle · Droit applicable -->
+        <div class="ml-grid" style="grid-template-columns: 1fr 1fr;">
+
+            <div class="ml-card">
+                <div class="ml-card-icon"><i class="fa-solid fa-copyright"></i></div>
+                <h2>Propriété intellectuelle</h2>
+                <p>
+                    L'ensemble du contenu présent sur ce site — textes, images, logos, charte graphique, structure — est
+                    la propriété exclusive d'<strong>AAD Services SRL</strong> et est protégé par le droit belge et
+                    international de la propriété intellectuelle.
+                </p>
+                <p>
+                    Toute reproduction, représentation, modification, publication ou transmission de tout ou partie du
+                    contenu, par quelque procédé que ce soit, est <strong>interdite sans autorisation préalable et
+                        écrite</strong> d'AAD Services SRL.
+                </p>
+                <p>
+                    Toute demande d'autorisation doit être adressée à : <a
+                        href="mailto:aadservices@outlook.be">aadservices@outlook.be</a>
+                </p>
+            </div>
+
+            <div class="ml-card">
+                <div class="ml-card-icon"><i class="fa-solid fa-scale-balanced"></i></div>
+                <h2>Droit applicable &amp; Litiges</h2>
+                <p>
+                    Les présentes mentions légales sont régies et interprétées conformément au <strong>droit
+                        belge</strong>.
+                </p>
+                <p>
+                    En cas de litige relatif à l'utilisation du présent site et à défaut de résolution amiable, les
+                    parties conviennent de soumettre le différend à la compétence exclusive des <strong>tribunaux de
+                        l'arrondissement judiciaire de Bruxelles</strong>.
+                </p>
+                <p>
+                    Pour toute réclamation ou médiation amiable, contactez-nous d'abord à :<br>
+                    <a href="mailto:aadservices@outlook.be">aadservices@outlook.be</a>
+                </p>
+            </div>
+
+        </div>
+
+        <!-- Update bar -->
+        <div class="ml-update-bar">
+            <p>Dernière mise à jour : <strong>Mars 2026</strong> &nbsp;·&nbsp; <a href="index.html">← Retour au site AAD
+                    Services</a></p>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="ml-footer">
+        <p>&copy; 2025 AAD Services SRL — BE 1016.041.643 — Tous droits réservés.</p>
+    </footer>
+
+</body>
+
+</html>
